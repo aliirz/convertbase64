@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import  ConverTo64 from '../components/ConvertTo64.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h1>Convert</h1>
+    <ConverTo64 />
   </main>
 </template>
