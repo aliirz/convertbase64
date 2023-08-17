@@ -40,7 +40,7 @@ onMounted(getRandomJoke);
     <!-- Sticky Footer -->
     <footer class="bg-light py-3 fixed-bottom">
       <div class="container text-center">
-        Made with ❤️ & 🦄 by <a href="https://aliirz.com">aliirz</a>
+        Made with ❤️, ⚡️ and 🦄 by <a href="https://aliirz.com">aliirz</a>
       </div>
     </footer>
   </main>
