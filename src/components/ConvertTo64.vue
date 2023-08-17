@@ -1,24 +1,38 @@
 <template>
-    <div>
-      <p>Text Area</p>
-      <p>Result</p>
-      <button>Convert</button>
+  <div>
+    <div class="form-group">
+        <textarea class="form-control" v-model="inputText" placeholder="Ready for some Base64 sorcery? Input your text!" id="floatingTextarea"></textarea>
+        <br />
+        <div class="d-flex justify-content-end">
+          <button type="button" @click="convertTo64" :disabled="isEncoded" class="btn btn-primary" :style="{ 'marginRight': '10px' }">Encode</button>
+          <button type="button" @click="convertFrom64" :disabled="!isEncoded" class="btn btn-secondary">Decode</button>
+        </div>
     </div>
-  </template>
+  </div>
+</template>
+
+
+
   
   <script lang="ts">
   import { defineComponent } from 'vue'
   
   export default defineComponent({
-    name: 'ConverTo64',
-    props: {
-      text: {
-        type: String,
-        required: false
+    name: 'ConvertTo64',
+    methods: {
+      convertTo64() {
+       this.inputText = btoa(this.inputText)
+       this.isEncoded = true
       },
-      result: {
-        type: String,
-        required: false
+      convertFrom64() {
+        this.inputText = atob(this.inputText)
+        this.isEncoded = false
+      }
+    },
+    data() {
+      return {
+        inputText: '',
+        isEncoded: false
       }
     }
   })
