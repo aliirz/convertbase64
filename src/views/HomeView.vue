@@ -29,12 +29,19 @@ onMounted(getRandomJoke);
 </script>
 
 <template>
-  <main>
-    <div class="container">
+  <main class="d-flex flex-column" style="min-height: 100vh;">
+    <div class="container flex-grow-1">
       <img alt="ED logo" class="img-fluid mx-auto d-block edlogo" src="../assets/aliirz_Mascot_Generation_for_encodedecode.lol_Name_Byte_the_Bas_f2379a47-5519-4cf8-aadc-31bf80e2d287.png" />
       <h1 class="text-center">EncodeDecode.LOL</h1>
       <p class="text-center">{{ selectedJoke }}</p>
       <ConvertTo64 />
     </div>
+
+    <!-- Sticky Footer -->
+    <footer class="bg-light py-3 fixed-bottom">
+      <div class="container text-center">
+        Made with ❤️ & 🦄 by <a href="https://aliirz.com">aliirz</a>
+      </div>
+    </footer>
   </main>
 </template>
